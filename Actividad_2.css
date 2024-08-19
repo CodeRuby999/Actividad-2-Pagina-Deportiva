@@ -8,10 +8,22 @@
     
 }
 
-.borde-de-targeta{
+.diseño-tarjeta{
+    display: flex;
+    gap: 30px;
+    width: 600px;
+    height: 500px;
+    margin-bottom: 30px;
+    
+  
+}
+.contenido-targeta{
+    display: flex;
+    flex-direction: column;
     border: 1px solid black;
-    width: 20vw;
-    height: 20vh;
+    -webkit-box-shadow: 10px 9px 18px 0px rgba(0,0,0,0.85);
+-moz-box-shadow: 10px 9px 18px 0px rgba(0,0,0,0.85);
+box-shadow: 10px 9px 18px 0px rgba(0,0,0,0.85);
 }
 
 .barra-de-navegacion{
@@ -23,12 +35,18 @@
     box-sizing: border-box;
     padding: 10px; ;
 }
+h3{
+    font-style:oblique;
+}
+img{
+    width: 300px;
+    height: 200px;
+}
 li{
     list-style-type: none;
     margin: 5px 6vh;  
     padding: 0px 30px;
     transition: background-color 0.2s;
-    font-style:oblique;
     box-sizing: border-box;
 }
 
@@ -36,7 +54,7 @@ li:hover{
     background-color: gainsboro ;
 }
 
-a{
+li a{
     color: white;
     text-decoration: none;
  
