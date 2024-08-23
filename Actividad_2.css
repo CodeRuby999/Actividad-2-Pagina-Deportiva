@@ -32,20 +32,18 @@
     flex-direction: column;
     border: 1px solid black;
     -webkit-box-shadow: 10px 9px 18px 0px rgba(0,0,0,0.85);
--moz-box-shadow: 10px 9px 18px 0px rgba(0,0,0,0.85);
-box-shadow: 10px 9px 18px 0px black;
-background-image: url("https://www.ultraimagehub.com/wallpapers/tr:flp-false,gx-0.9,gy-1,q-75,rh-3264,rw-5824,th-768,tw-1366/1236336773987041432.jpeg");
-text-shadow: 2px 2px 3px black;
+    -moz-box-shadow: 10px 9px 18px 0px rgba(0,0,0,0.85);
+    box-shadow: 10px 9px 18px 0px black;
+    background-image: url("https://www.ultraimagehub.com/wallpapers/tr:flp-false,gx-0.9,gy-1,q-75,rh-3264,rw-5824,th-768,tw-1366/1236336773987041432.jpeg");
+    text-shadow: 2px 2px 3px black;
 }
 
 .barra-de-navegacion{
     display: flex;
     flex-direction: row; 
-    background-color:rgb(7, 7, 7);
     font-size: medium;   
     padding: 0px; 
     border-radius: 10px;
-    overflow: visible;
     text-shadow: 2px 2px 3px black;
     justify-content: center;
     
@@ -55,7 +53,6 @@ text-shadow: 2px 2px 3px black;
 .ordenar-iconos{
     display: flex;
     flex-direction: column;
-    border-left: 1px solid white;
     width: 50%;
     padding: 30px 0px ;
 }
@@ -65,25 +62,46 @@ text-shadow: 2px 2px 3px black;
     text-align: center;    
     padding: 30px 0px;
 }
+
 .contenedor-info-y-redes-sociales{
     display: flex;
 }
 
 .barra-de-navegacion li{
+    display: flex;
     list-style-type: none;
-    padding: 10px 20px;
+    padding: 0px 0px;
     transition: background-color 0.2s;
     width: 300px;
-    box-sizing: border-box;
-    border: 1px solid rgb(66, 64, 64);
-    box-shadow: 2px 1px 1px rgb(72, 71, 70);
+    height: 21px;
     text-align: center;
+
+  
+
 }
 
-.barra-de-navegacion li:hover{
+.barra-de-navegacion li a{
+  
+    color: white;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    transition: color 0.3s ease,    
+    background-color 0.3s ease;
+    font-size: 16px;
+    background-color:rgb(7, 7, 7);
+    box-shadow: 1px 1px 1px rgb(72, 71, 70);
+    border-right:1px solid rgb(72, 71, 70)    ;
+
+}
+
+
+.barra-de-navegacion li a:hover{
     background-color: rgb(66, 64, 64);
+    color: white;
+    font-size: 17px;
 }
-
 .ordenar-iconos ul{
     display: flex;
     justify-content: center;
@@ -113,6 +131,7 @@ p{
 img{
     width: 300px;
     height: 200px;
+    color: white;
 }
 li{
     list-style-type:none;
@@ -120,12 +139,6 @@ li{
     text-align: left;
 }
 
-li a{
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    font-size: 16px;
-}
 footer{
     background-color: black;
     display: flex;
@@ -138,12 +151,6 @@ footer{
 
 div a{
     color:#86e9e9;
-}
-
-li a:hover{
-    color: white;
-    font-size: 17px;
-    
 }
 
 html{
@@ -160,20 +167,32 @@ html{
 Para pantallas pequeñas (Dispositivos moviles)
 */
 @media (width <= 430px){
+    .imagen-titulo{
+        height: 20vh;
+    }
     .barra-de-navegacion{
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
+        height: 100%; 
         padding: 5px 5px;
         align-items: center;
+        margin: 20px 0px;
+        border-radius: 10px;
+        background-color: black;
     }
     .barra-de-navegacion li{
+        display: flex;
+        padding: 5px 5px;
+        height: 100%;
+        width: 100%;
+   
+      
+    }
+    .barra-de-navegacion li a{
         border: none;
         box-shadow: none;
+       
 
-    }
-
-    .barra-de-navegacion li::before{
-        border-bottom: 1px solid white;
     }
 
     .diseño-tarjeta{
@@ -235,3 +254,4 @@ Para pantallas pequeñas (Dispositivos moviles)
     }
    
 }   
+
